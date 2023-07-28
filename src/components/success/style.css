@@ -1,0 +1,24 @@
+.white_rect_success {
+  height: 400px;
+  width: auto;
+  background-color: white;
+  position: absolute;
+  top: 17%;
+  left: 34%;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.tick_img_success {
+  width: 80px;
+  height: 80px;
+}
+
+.thanks_text {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.email_success {
+  font-weight: bold;
+}

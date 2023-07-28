@@ -1,0 +1,126 @@
+.grey_div {
+  background-color: hsl(235, 18%, 26%);
+  height: 745px;
+  width: 100%;
+  margin: auto;
+}
+
+.white_rect {
+  height: 500px;
+  width: 750px;
+  background-color: white;
+  position: absolute;
+  top: 16.2%;
+  left: 24.8%;
+  border-radius: 20px;
+}
+
+.d-flex {
+  display: flex;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.img-signup {
+  height: 92%;
+}
+
+.content_div {
+  flex-grow: 0.5;
+  position: relative;
+  top: 15px;
+}
+
+.header_text_div {
+  width: 350px;
+  text-align: center;
+}
+
+.header_text {
+  font-size: 36px;
+  font-weight: bold;
+  color: hsl(234, 29%, 20%);
+}
+
+.secondary_text {
+  font-size: 16px;
+}
+
+.d-flex-points {
+  display: flex;
+}
+
+.tick_img {
+  height: 20px;
+  width: 20px;
+}
+
+.point_text {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.d-flex-error {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+}
+
+.email_text {
+  font-weight: bold;
+}
+
+.error_text {
+  position: relative;
+  left: 10px;
+  font-style: italic;
+  color: red;
+}
+
+.input_email {
+  width: 350px;
+  height: 40px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  padding-left: 10px;
+  outline: 1px solid hsl(231, 7%, 60%);
+}
+
+.input_email:focus {
+  border: 1px solid black;
+}
+
+.input_email_error {
+  width: 350px;
+  height: 40px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  padding-left: 10px;
+  border: 2px solid red;
+  background-color: rgb(237, 235, 235);
+  color: red;
+  font-size: 16px;
+}
+
+.input_email_error:focus {
+  border: 2px solid red;
+  outline: none;
+}
+
+.btn_submit {
+  width: 362px;
+  height: 50px;
+  background-color: hsl(234, 29%, 20%);
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn_submit:hover {
+  background-color: hsl(4, 100%, 67%);
+  cursor: pointer;
+}
