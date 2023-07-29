@@ -1,8 +1,16 @@
-import { useState } from "react";
+import { setEmail } from "../../slices/emailSlice";
 import "./style.css";
+import { useDispatch, useSelector } from "react-redux";
 
 function Success() {
-  const [email, setEmail] = useState("ash@loremcompany.com");
+  const email = useSelector((state) => state.email.value);
+
+  const dispatch = useDispatch();
+
+  const handleDismiss = (e) => {
+    e.preventDefault();
+    dispatch(setEmail(""));
+  };
 
   return (
     <div className="white_rect_success">
@@ -29,7 +37,9 @@ function Success() {
       <br></br>
       <br></br>
 
-      <button className="btn_submit">Dismiss message</button>
+      <button className="btn_submit" onClick={handleDismiss}>
+        Dismiss message
+      </button>
     </div>
   );
 }

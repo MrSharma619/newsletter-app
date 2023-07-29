@@ -1,14 +1,31 @@
 import { useState } from "react";
 import "./style.css";
+import { useDispatch, useSelector } from "react-redux";
+import { setEmail } from "../../slices/emailSlice";
 
 function Body() {
   const [errorMsg, setErrorMsg] = useState("");
   const [error, setError] = useState(false);
-  const [emailId, setEmailId] = useState("");
+
+  const [emailId, setEmailId] = useState(
+    useSelector((state) => state.email.value)
+  );
+
+  const dispatch = useDispatch();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`The email you entered was: ${emailId}`);
+
+    if (validate(emailId)) dispatch(setEmail(emailId));
+    else {
+      setError(true);
+      setErrorMsg("Valid Email Required");
+    }
+  };
+
+  const validate = (x) => {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(x);
   };
 
   return (
